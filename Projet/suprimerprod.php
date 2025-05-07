@@ -4,10 +4,12 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="fiche.css" media="screen"/>
+	<link rel="stylesheet" href="./style/connexion.css">
+
     <title>supprimer produit</title>
 </head>
 <body>
-	<img src="images/image" alt="logo" class="logo">
+	<img src="./images/image.png" alt="logo" class="logo">
     <section id="bann">
 		<div class="pharma">PHARMACIE</div>
         <fieldset><legend class="leg"><h1> Informations suppimés </h1></legend><br>

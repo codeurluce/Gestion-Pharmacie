@@ -2,7 +2,9 @@
 <html>
 <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="fiche.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="./style/fiche.css" media="screen"/>
+	<link rel="stylesheet" href="./style/connexion.css">
+
     <title>Page recette</title>
 </head>
 
