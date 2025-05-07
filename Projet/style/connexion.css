@@ -1,0 +1,77 @@
+body{   /*pour toute la page connexion*/
+    background: linear-gradient(rgba(0,0,0,0.3),#009688), url(../images/homme-pouce-haut-croix);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    z-index: -1;
+}
+/* Bordure form pour la page connexion */
+.connexion-box{
+    width: 80vh;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+  }
+  .connexion-box h1{
+    float: left;
+    font-size: 40px;
+    border-bottom: 6px solid #019101;
+    margin-bottom: 50px;
+    padding: 13px 0;
+  }
+.textbox{ /* pour les caractéristiques des champs (nom, prenom, phone,....) de connexions*/
+    width: 100%;
+    overflow: hidden;
+    font-size: 20px;
+    padding: 8px 0;
+    margin: 8px 0;
+    border-bottom: 1px solid #4caf50;
+  }
+  .textbox i{ /* Pour les caracteristiques des logo password et username */
+    width: 26px;
+    float: left;
+    text-align: center;
+  }
+  .textbox input{ /* Pour les caracteristiques input lecriture nom, pnom, phone,.... */
+    border: none;
+    outline: none;
+    background: none;
+    color: white;
+    font-size: 18px;
+    width: 80%;
+    float: left;
+    margin: 0 10px;
+  }
+  /* Notre bouton de connexion*/
+  .conex{
+    width: 280px;
+    position: absolute;
+    top: 69%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: #4caf50;
+    border: .5px solid #4caf50;
+    color: #019101;
+    padding: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 24px;
+    margin: 12px 0;
+    box-shadow: -5px 12px 0px #019101;
+    border-radius: 24px;
+  }  
+/* Notre bouton de connexion lorsque la sourris est dessus*/
+ .conex:hover{
+    color: white;
+    background-color: #019101;
+    box-shadow: -5px 12px 0px #4caf50;
+    height: 50px;
+    width: 300px;
+    font-size: 25px;
+  }
+.renvoi{ /*Pour la position du lien j'ai pas de compte */
+    padding-left: 50%;
+    padding-top: 33%;
+    position: absolute;
+}

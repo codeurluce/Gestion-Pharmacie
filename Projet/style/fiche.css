@@ -1,0 +1,630 @@
+/* ----------------------------------------------------------------------------------------------*/
+                                    /* Pour toutes les pages */
+/* ----------------------------------------------------------------------------------------------*/
+@import "https://use.fontawesome.com/releases/v5.5.0/css/all.css"; /* pour importer les logo de username et password*/
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Merriweather', serif;
+}
+header{ /* pour le menu de la page administrateur */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  transition: 0.7s;
+  padding: 45px 100px;
+}
+.logo{ /*pour le nom "administrateur" du menu de la page administrateur*/
+  position: relative;
+  padding-left: 100px;
+  font-weight: 700;
+  color: #00FF00;
+  text-decoration: none;
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: 0.6s;
+}
+header ul{/*pour tous les elements qui sont dans le ul*/
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header ul li{ /* pour les elements de la liste li */
+  position: relative;
+  list-style: none;
+}
+header ul li a{ /* pour les liens de la liste */
+  position: relative;
+  margin: 0 15px;
+  text-decoration: none;
+  color: #00FF00;
+  letter-spacing: 2px;
+  font-weight: 500px;
+  transition: 0.7s;
+}
+a{  /* Pour tous les liens */
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+a:hover{ /*pour tout les liens*/
+    color:	#00FF00;
+}
+.logo{ /*Pour le logo de la pharmacie*/
+    width: 190px;
+    position: absolute;
+    top: 10px;
+    padding-left: 0px;
+}
+.log{ /*Pour le logo de la pharmacie*/
+  width: 150px;
+  position: absolute;
+}
+
+.pharma{ /* Pour le mot pharmacie a cote du logo */
+    font-size: 90px;
+    color: #019101;
+    font-family: fantasy;
+    position: absolute;
+    top: 4%;
+    left: 12%;
+}
+.pharmas{ /* Pour le mot pharmacie a cote du logo */
+  font-size: 90px;
+  color: #019101;
+  font-family: fantasy;
+  position: absolute;
+  top: 14%;
+  left: 11%;
+}
+
+/* ----------------------------------------------------------------------------------------------*/
+                                    /* Pour la page de bienvenue */
+/* ----------------------------------------------------------------------------------------------*/
+#banner{   /*pour toute la page Bienvenue*/
+    background: linear-gradient(rgba(0,0,0,0.3),#009688), url(images/homme-pouce-haut-croix);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    z-index: -1;
+}
+.banner-text{ /* Pour le mot bienvenue dans la page bienvenue*/
+    text-align: center;
+    color: white;
+    padding-top: 180px;
+    text-transform: uppercase;
+    display: block;
+}
+.banner-text h1{ /* Pour personnaliser le mot bienvenue dans la page bienvenue*/
+    font-size: 60px;
+    animation: text 4s infinite;
+    letter-spacing: 5px;
+    margin-bottom: 20px;
+    position: relative;
+    background: #019101;
+}
+
+@keyframes text{ /* pour l'animation du mot bienvenue */
+    0%{
+        color: white;
+    }
+    30%{
+        letter-spacing: 50px;
+    }
+    100%{
+        letter-spacing: 5px;
+    }
+}
+.lien1{ /* lien dans la page bienvenu le bouton se connecter */
+    margin: 70px auto 0;
+    text-align: center;
+    color: white;
+    padding-top: 100px;
+    text-transform: uppercase;
+    position: absolute;
+    margin-left: 300px;
+}
+
+.lien1 a{  /* border'radius permet de faire incliner*/
+width: 200px;
+text-decoration:none;
+display: inline-block;
+margin: 0 80px;
+padding: 12px 0;
+background-color: #019101 ;
+color: white;
+border: .5px solid #019101;
+border-radius: 24px;
+box-shadow: -10px 10px 0px;
+}
+.lien1 a:hover{
+color: #019101;
+padding: 18px 9px;
+background-color: white;
+}
+.lien2{ /* lien dans la page bienvenu :le bouton s'inscrire */
+margin: 70px auto 0;
+text-align: center;
+color: white;
+padding-top: 100px;
+text-transform: uppercase;
+position: absolute;
+margin-left: 700px;
+}
+.lien2 a{
+width: 200px;
+text-decoration:none;
+display: inline-block;
+margin: 0 80px;
+padding: 12px 0;
+background-color: #019101 ;
+color: white;
+border: .5px solid #019101;
+border-radius: 24px;
+box-shadow: -10px 10px 0px;
+}
+.lien2 a:hover{
+color: #019101;
+padding: 18px 9px;
+background-color: white;
+}
+
+/* ----------------------------------------------------------------------------------------------*/
+                                    /* Pour la page de connexion */
+/* ----------------------------------------------------------------------------------------------*/
+#banne{   /*pour toute la page connexion*/
+    background: linear-gradient(rgba(0,0,0,0.3),#009688), url(images/homme-pouce-haut-croix);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    z-index: -1;
+}
+/* Bordure form pour la page connexion */
+.connexion-box{
+    width: 50vh;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+  }
+  .connexion-box h1{
+    float: left;
+    font-size: 40px;
+    border-bottom: 6px solid #019101;
+    margin-bottom: 50px;
+    padding: 13px 0;
+  }
+.textbox{ /* pour les caractéristiques des champs (nom, prenom, phone,....) de connexions*/
+    width: 100%;
+    overflow: hidden;
+    font-size: 20px;
+    padding: 8px 0;
+    margin: 8px 0;
+    border-bottom: 1px solid #4caf50;
+  }
+  .textbox i{ /* Pour les caracteristiques des logo password et username */
+    width: 26px;
+    float: left;
+    text-align: center;
+  }
+  .textbox input{ /* Pour les caracteristiques input lecriture nom, pnom, phone,.... */
+    border: none;
+    outline: none;
+    background: none;
+    color: white;
+    font-size: 18px;
+    width: 80%;
+    float: left;
+    margin: 0 10px;
+  }
+  /* Notre bouton de connexion*/
+  .conex{
+    width: 280px;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: #4caf50;
+    border: .5px solid #4caf50;
+    color: #019101;
+    padding: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 24px;
+    margin: 12px 0;
+    box-shadow: -5px 12px 0px #019101;
+    border-radius: 24px;
+  }  
+/* Notre bouton de connexion lorsque la sourris est dessus*/
+ .conex:hover{
+    color: white;
+    background-color: #019101;
+    box-shadow: -5px 12px 0px #4caf50;
+    height: 50px;
+    width: 300px;
+    font-size: 25px;
+}
+/* ----------------------------------------------------------------------------------------------*/
+                                    /* Pour la page de inscription */
+/* ----------------------------------------------------------------------------------------------*/
+
+#bann{ /*pour toute la page inscription*/
+    background: linear-gradient(rgba(0,0,0,0.3),#009688), url(images/homme-pouce-haut-croix);
+    background-size: cover;
+    background-position: center;
+    height: 155vh;
+    z-index: -1;
+}
+/* Bordered form pour la page inscription */
+.modification-box{
+    width: 85vh;
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%,-50%);
+    color: white;
+  }
+  .modification-box h1{
+    float: left;
+    font-size: 40px;
+    border-bottom: 6px solid #019101;
+    padding: 13px 0;
+    margin-bottom: 50px;
+  }
+  .vente{
+    width: 90vh;
+    position: absolute;
+    top: 10%;
+    left: 25%;
+    transform: translate(-50%,-50%);
+    color: white;
+  }
+  .vente h1{
+    float: left;
+    font-size: 40px;
+    border-bottom: 6px solid #019101;
+    padding: 13px 0;
+    margin-bottom: 50px;
+  }
+  .inscription-box{
+    width: 100vh;
+    position: absolute;
+    top: 62%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+  }
+  .inscription-box h1{
+    float: left;
+    font-size: 40px;
+    border-bottom: 6px solid #019101;
+    padding: 13px 0;
+    margin-bottom: 50px;
+  }
+  input[type="radio"]{  /* Pour la distance des boutons radios homme et femme */
+    margin-left: 80px;
+        position: relative;
+        top: 13.33333px;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        height: 20px;
+        width: 20px;
+        transition: all 2s ease-out 0s;
+        border: none;
+        cursor: pointer;
+        display: inline-block;
+        margin-right: 0.5rem;
+        outline: none;
+        position: relative;
+        z-index: 1000;
+      }
+      input[type="radio"]:hover {
+        background: #019101;
+      
+
+
+
+
+
+}
+.boxtext{ /* pour les caractéristiques des champs (nom, prenom, phone,....) de connexions*/
+    width: 100%;
+    overflow: hidden;
+    font-size: 20px;
+    padding: 8px 0;
+    margin: 8px 0;
+    border-bottom: 1px solid #4caf50;
+  }
+  .boxtext i{ /* Pour les caracteristiques des logo password et username */
+    width: 26px;
+    float: left;
+    text-align: center;
+  }
+  .boxtext input{ /* Pour les caracteristiques input lecriture nom, pnom, phone,.... */
+    border: none;
+    outline: none;
+    background: none;
+    color: white;
+    font-size: 18px;
+    width: 80%;
+    float: left;
+    margin: 0 10px;
+  }
+/* Notre bouton de inscription*/
+.inscrip{
+    width: 250px;
+    position: absolute;
+    top: 95%;
+    left: 80%;
+    transform: translate(-50%,-50%);
+    background: #4caf50;
+    border: .5px solid #4caf50;
+    color: #019101;
+    padding: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 24px;
+    margin: 12px 0;
+    box-shadow: -5px 12px 0px #019101;
+  }  
+/* Notre bouton de inscription lorsque la sourris est dessus*/
+ .inscrip:hover{
+    color: white;
+    background-color: #019101;
+    box-shadow: -5px 12px 0px #4caf50;
+    height: 50px;
+    width: 300px;
+    font-size: 25px;
+  }
+  .annuler{
+    width: 250px;
+    position: absolute;
+    top: 104%;
+    left: 40%;
+    transform: translate(-50%,-50%);
+    background: #4caf50;
+    border: .5px solid #4caf50;
+    color: #019101;
+    padding: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 24px;
+    margin: 12px 0;
+    box-shadow: -5px 12px 0px #019101;
+  } 
+
+/* Notre bouton de inscription lorsque la sourris est dessus*/
+ .annuler:hover{
+    color: white;
+    background-color: #019101;
+    box-shadow: -5px 12px 0px #4caf50;
+    height: 50px;
+    width: 270px;
+    font-size: 25px;
+  }
+  .annul{
+    width: 200px;
+    position: absolute;
+    top: 80%;
+    left: 70%;
+    transform: translate(-50%,-50%);
+    background: #4caf50;
+    border: .5px solid #4caf50;
+    color: #019101;
+    padding: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 24px;
+    margin: 12px 0;
+    box-shadow: -5px 12px 0px #019101;
+  }  
+/* Notre bouton de inscription lorsque la sourris est dessus*/
+ .annul:hover{
+    color: white;
+    background-color: #019101;
+    box-shadow: -5px 12px 0px #4caf50;
+    height: 50px;
+    width: 270px;
+    font-size: 25px;
+  }
+  .back{
+    width: 200px;
+    position: absolute;
+    top: 110%;
+    left: 80%;
+    transform: translate(-50%,-50%);
+    background: #4caf50;
+    border: .5px solid #4caf50;
+    color: #019101;
+    padding: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 24px;
+    margin: 12px 0;
+    box-shadow: -5px 12px 0px #019101;
+  }  
+/* Notre bouton de inscription lorsque la sourris est dessus*/
+ .back:hover{
+    color: white;
+    background-color: #019101;
+    box-shadow: -5px 12px 0px #4caf50;
+    height: 50px;
+    width: 270px;
+    font-size: 25px;
+  }
+  .modif{
+    background: #4caf50;
+    border: .5px solid #4caf50;
+    color: #019101;
+    padding: 5px;
+    cursor: pointer;
+  }
+  .modif:hover{
+    color: white;
+    background-color: #019101;
+  }
+.conti{
+    background: #019101;
+    text-align: center;
+    padding: 20px 30px;
+    margin-left: 65%;
+    width: 250px;
+    top: 50px;
+    position: absolute;
+    text-transform: translate(-50% -50%);
+    color: white;
+    font-size: 20px;
+    animation: mdp 2s linear 2;
+  }
+  @keyframes mdp{ /* pour l'animation la phrase inscrivez vous si vous n'avez pas de compte*/
+    100%{
+        opacity: 0;
+    }
+}
+
+.wrapper{ /* pour la barre de menu */
+  width: 90%;
+  height: 22%;
+  padding-left: 130px;
+}
+.mega_menu{
+  width: 100%;
+  height: 60%;
+}
+.mega_menu ul{
+  width: 100%;
+  height: 100%;
+  background: #4caf50;
+  text-align: center;
+  line-height: 60px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mega_menu ul li{
+  display: inline-block;
+  margin: 0 20px;
+  padding: 0 10px;
+  list-style: none;
+}
+.mega_menu ul li p{
+  text-decoration: none;
+  color: #007000;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 5px;
+  font-size: 12px;
+  display: block;
+}
+.mega_menu ul li .sub_menu{
+  position: absolute;
+  background: #007000;
+  width: 95%;
+  left: 0;
+  top: 70px;
+  padding: 25px 15px;
+  display: flex;
+  justify-content: space-around;
+  line-height: 24px;
+  visibility: hidden;
+}
+.mega_menu ul li:hover{ 
+  background: #007000;
+}
+.mega_menu ul li:hover p{
+  color: #4caf50;
+  cursor: pointer;
+}
+.mega_menu ul li:hover .sub_menu{
+  visibility: visible;
+
+}
+.mega_menu ul li .sub_menu .col img{
+  width: 250px;
+  height: 150px;
+  display: block;
+}
+.mega_menu ul li .sub_menu p{
+  color: #000000;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+h2{  
+  margin-top: 45px;
+  margin-left: 100px;
+    background: green;
+    font-size: 30px;   
+    float: left;
+    display: inline;
+    font-size: 100px;
+    color: #4caf50;
+}
+.dr{
+  padding-top:100px;
+  margin: 100px;
+
+}
+fieldset {
+  width: 700px;
+  margin-top: 200px;
+  margin-left: 200px;
+  font-family: sans-serif;
+  border: 5px solid #019101;
+  background: linear-gradient(rgba(0,0,0,0.3),#009688), url(images/homme-pouce-haut-croix);
+  border-radius: 5px;
+  padding: 15px;
+  position: absolute;
+}
+
+fieldset legend {
+  background: #019101;
+  color: #fff;
+  padding: 5px 10px ;
+  font-size: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 0 5px #ddd;
+ margin-left: 25px;
+}
+.leg {  
+  top: 20px;
+  background: #019101;
+  color: #fff;
+  padding: 5px 10px ;
+  font-size: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 0 5px #ddd;
+  margin-left: 25px;
+
+}
+
+h3{
+  font-size: 25px;
+  color: #00FF00;
+}
+h4{
+  font-size: 20px;
+}
+table{
+  border-collapse: collapse;
+  width: 300px;
+}
+th, td{
+  border: 1px solid black;
+  padding: 15px;
+}
+th{
+  color: #00FF00;
+}
+.dec{
+  margin-left: 10%;
+}

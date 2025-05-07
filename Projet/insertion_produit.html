@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="fiche.css" media="screen"/>
+    <title>Ajouter Produit</title>
+    <link  >
+</head>
+<body>
+    <img src="images/image" alt="logo" class="logo">
+    <section id="bann">
+        <div class="pharma">PHARMACIE</div>
+    <form action="inserer_pdt.php" method="POST" >
+        <div class="inscription-box"> 
+            <h1>Ajout d'un produit</h1>   
+            <div class="boxtext">
+                <input type="text" name="nom" id="nom" placeholder="Le nom du produit" required>
+            </div>
+            <div class="boxtext">
+                <input type="text" name="prix" id="prix" placeholder="Le prix du produit" required>
+            </div>
+            <div class="boxtext">
+                <input type="text" name="place" id="place" placeholder="L'emplacement du produit" required>
+            </div>
+            <div class="boxtext">
+                <input type="datetime-local" name="date" id="date" placeholder="jj/mm/aa hh:min" required>
+            </div>
+            <div class="boxtext">
+                <input type="number" name="quantite" id="quantite" placeholder="La quantite a stocké" required>
+            </div>
+            <br><br><br><br>
+            <input type="submit" value="Ajouter" class="inscrip"> 
+        </div>    
+    </form>
+	</section>
+</body>
+</html>

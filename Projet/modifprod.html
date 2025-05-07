@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="fiche.css" media="screen"/>
+    <title>Modifier produit</title>
+</head>
+<body>
+    <img src="images/image" alt="logo" class="logo">
+    <section id="bann"></section>
+    <div class="pharma">PHARMACIE</div>
+    <form action="modifier.php" method="POST" >
+        <div class="inscription-box">
+            <h1>Modification d'un produit  </h1>
+        </br>
+            <div class="boxtext">
+                <h3>Le numero du produit á modifier:</h3><br>
+                <input type="number" name="code" id="code" placeholder="Le code du produit"><br>
+            </div>
+            <div class="boxtext">
+                <h3>Les nouveaux informations :</h3>
+                <input type="text" name="nom" id="nom" placeholder="Le nom du produit">
+            </div>
+            <div class="boxtext">
+                <input type="text" name="prix" id="prix" placeholder="Le prix du produit" >
+            </div>
+            <div class="boxtext">
+                <input type="text" name="place" id="place" placeholder="L'emplacement du produit" >
+            </div>
+            <div class="boxtext">
+                <input type="date" name="date" id="date" placeholder="La date d'expiration" >
+            </div>
+            <div class="boxtext">
+                <input type="number" name="quantite" id="quantite" placeholder="La quantite a stocké" >
+            </div>
+            <br><br><br><br>
+            <input type="submit" value="Modifier" class="inscrip">
+        </div> 
+        </form>
+    </div>
+    </section>    
+</body>
+</html>

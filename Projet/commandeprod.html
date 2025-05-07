@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Passer Commande</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="fiche.css" media="screen"/>
+    </head>
+    <body>
+        <img src="images/image" alt="logo" class="logo">
+        <section id="bann">
+        <div class="pharma">PHARMACIE</div>
+        <form action="commande.php" method="POST" >
+            <div class="inscription-box"> 
+            <h1>Passer Commande</h1>   
+            <div class="boxtext">
+                <input type="text" name="produit" id="produit" placeholder="Le nom du produit à commander" required>
+            </div>
+            <div class="boxtext">
+                <input type="number" name="quantite" id="quantite" placeholder="La quantite à commander" required>
+            </div>
+            <div class="boxtext">
+                <input type="number" name="bon" id="bon" placeholder="Le prix du bon" required>
+            </div>
+            <div class="boxtext">
+                <input type="datetime" name="date" id="date" placeholder="jj/mm/aa" >
+            </div>
+            <div class="boxtext">
+                <input type="number" name="identifiant" id="identifiant" placeholder="L'identifiant du pharmacien" required>
+            </div>
+            <br><br><br><br>
+            <input type="submit" value="Passer" class="inscrip"> 
+            </div>    
+        </form>
+	    </section>
+    </body>
+</html>
