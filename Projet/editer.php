@@ -38,7 +38,7 @@
             <td> <p> <?= $user['id_employe']?> </p></td>
             <td> <p> <?= $user['username']?> </p></td>
             <td>
-                <a href="modifie.php?edit= <?php echo $user['id_employe'] ?>"  class="modif">Modifier</a>
+                <a href="modifier.php?edit= <?php echo $user['id_employe'] ?>"  class="modif">Modifier</a>
             </td>
         
         </tr>
@@ -49,7 +49,7 @@
     </tbody>
 </table>
 </fieldset><br>
-<form action="modifie.php" methode="POST">
+<form action="modifier.php" methode="POST">
         <div class="modification-box">
                     <h1>Modification</h1>
                         <div class="boxtext">
