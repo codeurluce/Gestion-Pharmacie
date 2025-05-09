@@ -66,8 +66,12 @@
                     ?>
                 </tbody>
             </table>
+            <a href="Administrateur.html"><input type="submit" value="Menu principal" class="back" ></a>
+    
         </fieldset>
+        
     <br>
+ 
         <div class="modification-box">
             <?php if (isset($_GET['success']) && $_GET['success'] == 1): ?>
                 <div style="background-color: #d4edda; color: #155724; padding: 10px; margin: 10px; border: 1px solid #c3e6cb;">
@@ -81,6 +85,8 @@
             if (msg) msg.remove();
         }, 5000); // 5 secondes
     </script>
+
+
 </body>
 
 </html>

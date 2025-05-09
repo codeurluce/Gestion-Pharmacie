@@ -55,8 +55,10 @@
 ?>
     </tbody>
 </table>
+<a href="Administrateur.html"><input type="submit" value="Menu principal" class="back" ></a>
+
+
 </fieldset>
-    <a href="administrateur.html"><input type="submit" value="Retour" class="annuler" ></a>
 </section>
 </body>
 
