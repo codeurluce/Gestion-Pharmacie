@@ -87,7 +87,7 @@ a:hover{ /*pour tout les liens*/
                                     /* Pour la page de bienvenue */
 /* ----------------------------------------------------------------------------------------------*/
 #banner{   /*pour toute la page Bienvenue*/
-    background: linear-gradient(rgba(0,0,0,0.3),#009688), url(images/homme-pouce-haut-croix);
+    background: linear-gradient(rgba(0,0,0,0.3),#009688), url(../images/homme-pouce-haut-croix.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -179,7 +179,7 @@ background-color: white;
                                     /* Pour la page de connexion */
 /* ----------------------------------------------------------------------------------------------*/
 #banne{   /*pour toute la page connexion*/
-    background: linear-gradient(rgba(0,0,0,0.3),#009688), url(images/homme-pouce-haut-croix);
+    background: linear-gradient(rgba(0,0,0,0.3),#009688), url(../images/homme-pouce-haut-croix.jpg);
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -256,7 +256,7 @@ background-color: white;
 /* ----------------------------------------------------------------------------------------------*/
 
 #bann{ /*pour toute la page inscription*/
-    background: linear-gradient(rgba(0,0,0,0.3),#009688), url(images/homme-pouce-haut-croix);
+    background: linear-gradient(rgba(0,0,0,0.3),#009688), url(../images/homme-pouce-haut-croix.jpg);
     background-size: cover;
     background-position: center;
     height: 155vh;
@@ -471,6 +471,17 @@ background-color: white;
     color: white;
     background-color: #019101;
   }
+  .supp{
+    background: #af4c4c;
+    border: .5px solid #af4c4c;
+    color: #910101;
+    padding: 5px;
+    cursor: pointer;
+  }
+  .supp:hover{
+    color: white;
+    background-color: #910101;
+  }
 .conti{
     background: #019101;
     text-align: center;
@@ -580,11 +591,12 @@ fieldset {
   margin-left: 200px;
   font-family: sans-serif;
   border: 5px solid #019101;
-  background: linear-gradient(rgba(0,0,0,0.3),#009688), url(images/homme-pouce-haut-croix);
+  background: linear-gradient(rgba(0,0,0,0.3),#009688), url(../images/homme-pouce-haut-croix);
   border-radius: 5px;
   padding: 15px;
   position: absolute;
 }
+
 
 fieldset legend {
   background: #019101;
@@ -593,7 +605,7 @@ fieldset legend {
   font-size: 20px;
   border-radius: 5px;
   box-shadow: 0 0 0 5px #ddd;
- margin-left: 25px;
+  margin-left: 25px;
 }
 .leg {  
   top: 20px;

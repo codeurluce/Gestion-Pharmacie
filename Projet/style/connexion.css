@@ -1,5 +1,5 @@
 body{   /*pour toute la page connexion*/
-    background: linear-gradient(rgba(0,0,0,0.3),#009688), url(../images/homme-pouce-haut-croix);
+    background: linear-gradient(rgba(0,0,0,0.3),#009688), url(../images/homme-pouce-haut-croix.jpg);
     background-size: cover;
     background-position: center;
     height: 100vh;
