@@ -46,8 +46,6 @@
             <td> <p> <?= $user['sexe']?> </p></td>
             <td> <p> <?= $user['phone']?> </p></td>
             <td> <p> <?= $user['email_employe']?> </p></td>
-
-
         </tr>
  
 <?php
@@ -57,9 +55,7 @@
 </table>
 <a href="Administrateur.html"><input type="submit" value="Menu principal" class="back" ></a>
 
-
 </fieldset>
 </section>
 </body>
-
 </html>
