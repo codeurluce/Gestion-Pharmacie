@@ -460,16 +460,27 @@ background-color: white;
     width: 270px;
     font-size: 25px;
   }
-  .modif{
+  .consult{
     background: #4caf50;
     border: .5px solid #4caf50;
     color: #019101;
     padding: 5px;
     cursor: pointer;
   }
-  .modif:hover{
+  .consult:hover{
     color: white;
     background-color: #019101;
+  }
+  .modif{
+    background: #afaa4c;
+    border: .5px solid #afaa4c;
+    color: #918f01;
+    padding: 5px;
+    cursor: pointer;
+  }
+  .modif:hover{
+    color: white;
+    background-color: #918f01;
   }
   .supp{
     background: #af4c4c;

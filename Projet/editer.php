@@ -25,7 +25,7 @@
                     <th>Nom </th>
                     <th>Prenom </th>
                     <th>Username</th>
-                    <th colspan="2">Action</th>
+                    <th colspan="3">Action</th>
                 </thead>
 
                 <tbody>
@@ -49,12 +49,15 @@
                                 <p> <?= $user['username'] ?> </p>
                             </td>
                             <td>
+                                <a href="membres.php?edit=<?php echo $user['id_employe'] ?>" class="consult">Consulter</a>
+                            </td>
+                            <td>
                                 <a href="modifier.php?edit=<?php echo $user['id_employe'] ?>" class="modif">Modifier</a>
                             </td>
                             <td>
-                                <a href="bannir.php?delete=<?php echo $user['id_employe'] ?>" class="supp">Supprimer</a>
-
+                                <a href="bannir.php?edit=<?php echo $user['id_employe'] ?>" class="supp">Supprimer</a>
                             </td>
+                            
 
                         </tr>
 

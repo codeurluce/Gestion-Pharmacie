@@ -1,3 +1,90 @@
+<?php
+$bdd = new PDO('mysql:host=localhost;dbname=db_pharmacie;charset=utf8', 'root', '');
+$bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+
+$id_employe = "";
+$username = "";
+$Name = "";
+$prenom = "";
+$sexe = "";
+$phone = "";
+$email = "";
+$mdp_repeat = "";
+
+// Récupération des données de l('employé à modifier)
+// ✅ RÉCUPÉRER L'EMPLOYÉ À MODIFIER
+if (isset($_GET["edit"])) {
+    $id_employe = $_GET["edit"];
+    if (!empty($id_employe) && is_numeric($id_employe)) {
+        $query = $bdd->prepare("SELECT * FROM employe WHERE id_employe = :id");
+        $query->execute([':id' => $id_employe]);
+        $data = $query->fetch(PDO::FETCH_ASSOC);
+
+        if ($data) {
+            $id_employe = $data['id_employe'];
+            $username = $data['username'];
+            $Name = $data['nom_employe'];
+            $prenom = $data['prenom_employe'];
+            $sexe = $data['sexe'];
+            $phone = $data['phone'];
+            $email = $data['email_employe'];
+            $mdp_repeat = $data['password'];
+        }
+    }
+}
+
+// Traitement du formulaire
+if (
+    isset($_POST['id_employe'], $_POST['pseudo'], $_POST['nom'], $_POST['pnom'], $_POST['sexe'],
+          $_POST['phone'], $_POST['email'], $_POST['motdp'])
+) {
+    $id_employe = $_POST['id_employe'];
+    $username = $_POST['pseudo'];
+    $Name = $_POST['nom'];
+    $prenom = $_POST['pnom'];
+    $sexe = $_POST['sexe'];
+    $phone = $_POST['phone'];
+    $email = $_POST['email'];
+    // $mdp_repeat = $_POST['motdp'];
+    $mdp_repeat = password_hash($_POST['motdp'], PASSWORD_DEFAULT);
+
+
+    if (!empty($id_employe) && is_numeric($id_employe)) {
+        $update = $bdd->prepare("UPDATE employe SET username = :pseudo, nom_employe = :nom, prenom_employe = :pnom, sexe = :sexe, phone = :phone, email_employe = :email, password = :motdp WHERE id_employe = :id");
+        $update->execute([
+            'pseudo' => $username,
+            'nom' => $Name,
+            'pnom' => $prenom,
+            'sexe' => $sexe,
+            'phone' => $phone,
+            'email' => $email,
+            'motdp' => $mdp_repeat,
+            'id' => $id_employe
+        ]);
+        header("Location: editer.php?success=1");
+        exit();
+    }
+    
+}
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -21,11 +108,11 @@
 
                             <div class="boxtext">
                                 <i class="fas fa-lock"></i>
-                                <input type="text" placeholder="Identifiant" name="id_employe"  required/></div>
+                                <input type="text" placeholder="Identifiant" name="id_employe" value="<?= htmlspecialchars($id_employe) ?>"  required/></div>
                                 
                             <div class="boxtext">
                                 <i class="fas fa-user"></i>
-                                <input type="text" placeholder="Username" name="pseudo"  required/></div><br>
+                                <input type="text" placeholder="Username" name="pseudo" value="<?= htmlspecialchars($username) ?>" required/></div><br>
                                 <input type="submit" name="delete" value="Suppression" class="inscrip" >
         </div>
     </form> 

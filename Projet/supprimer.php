@@ -49,7 +49,7 @@ if (isset($_POST['delete'])){
 }
 ?>
 <br>
-<a href="administrateur.html"><input type="submit" value="Retour" class="back" ></a>
+<a href="editer.php"><input type="submit" value="Retour" class="back" ></a>
 </fieldset>
     </section>
 </body>
