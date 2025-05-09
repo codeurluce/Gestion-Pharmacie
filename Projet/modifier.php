@@ -1,5 +1,7 @@
 <?php
 $bdd = new PDO('mysql:host=localhost;dbname=db_pharmacie;charset=utf8', 'root', '');
+$bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
 
 $id_employe = "";
 $username = "";
@@ -10,23 +12,24 @@ $phone = "";
 $email = "";
 $mdp_repeat = "";
 
-// Récupération des données via GET
-if (isset($_GET["id_employe"])) {
-    $id_employe = $_GET["id_employe"];
+// Récupération des données de l('employé à modifier)
+// ✅ RÉCUPÉRER L'EMPLOYÉ À MODIFIER
+if (isset($_GET["edit"])) {
+    $id_employe = $_GET["edit"];
     if (!empty($id_employe) && is_numeric($id_employe)) {
-        $query = "SELECT * FROM employe WHERE id_employe = ?";
-        $stmt = $bdd->prepare($query);
-        $stmt->execute([$id_employe]);
-        $data = $stmt->fetch(PDO::FETCH_ASSOC);
+        $query = $bdd->prepare("SELECT * FROM employe WHERE id_employe = :id");
+        $query->execute([':id' => $id_employe]);
+        $data = $query->fetch(PDO::FETCH_ASSOC);
+
         if ($data) {
             $id_employe = $data['id_employe'];
-            $username = $data['pseudo'];
-            $Name = $data["nom"];
-            $prenom = $data["pnom"];
-            $sexe = $data["sexe"];
-            $phone = $data["phone"];
-            $email = $data["email"];
-            $mdp_repeat = $data["motdp"];
+            $username = $data['username'];
+            $Name = $data['nom_employe'];
+            $prenom = $data['prenom_employe'];
+            $sexe = $data['sexe'];
+            $phone = $data['phone'];
+            $email = $data['email_employe'];
+            $mdp_repeat = $data['password'];
         }
     }
 }
@@ -43,10 +46,12 @@ if (
     $sexe = $_POST['sexe'];
     $phone = $_POST['phone'];
     $email = $_POST['email'];
-    $mdp_repeat = $_POST['motdp'];
+    // $mdp_repeat = $_POST['motdp'];
+    $mdp_repeat = password_hash($_POST['motdp'], PASSWORD_DEFAULT);
+
 
     if (!empty($id_employe) && is_numeric($id_employe)) {
-        $update = $bdd->prepare("UPDATE employe SET pseudo = :pseudo, nom = :nom, pnom = :pnom, sexe = :sexe, phone = :phone, email = :email, motdp = :motdp WHERE id_employe = :id");
+        $update = $bdd->prepare("UPDATE employe SET username = :pseudo, nom_employe = :nom, prenom_employe = :pnom, sexe = :sexe, phone = :phone, email_employe = :email, password = :motdp WHERE id_employe = :id");
         $update->execute([
             'pseudo' => $username,
             'nom' => $Name,
@@ -57,12 +62,13 @@ if (
             'motdp' => $mdp_repeat,
             'id' => $id_employe
         ]);
-        header("Location: editer.php");
+        header("Location: editer.php?success=1");
         exit();
     }
+    
 }
-?>
 
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -76,7 +82,7 @@ if (
 <img src="./images/image.png" alt="logo" class="logo">
 <section id="bann">
     <div class="pharma">PHARMACIE</div>
-    <form action="#" method="POST">
+    <form action="modifier.php?edit=<?= $id_employe ?>" method="POST">
         <div class="inscription-box">
             <h1>Modification</h1>
 
@@ -110,8 +116,9 @@ if (
             </div>
 
             <div class="boxtext">
-                <input type="password" placeholder="Password" name="motdp" value="<?= htmlspecialchars($mdp_repeat) ?>" required>
-            </div><br>
+                <input type="password" placeholder="Mot de passe" name="motdp" value="<?= htmlspecialchars($mdp_repeat) ?>"  required>
+            </div>
+            <br>
 
             <input type="submit" value="Modifier" class="inscrip">
         </div>

@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -19,9 +18,9 @@
 <br>
 <table>
     <thead>
-        <th>Id_employe  </th>
-        <th>username  </th>
-        <div class="action"><th  class="action">action  </th></div>
+        <th>Nom  </th>
+        <th>Prenom  </th>
+        <div class="action"><th  class="action">Username</th></div>
     </thead>
 
     <tbody>
@@ -35,7 +34,8 @@
         
             ?> 
         <tr>
-            <td> <p> <?= $user['id_employe']?> </p></td>
+            <td> <p> <?= $user['nom_employe']?> </p></td>
+            <td> <p> <?= $user['prenom_employe']?> </p></td>
             <td> <p> <?= $user['username']?> </p></td>
             <td>
                 <a href="modifier.php?edit= <?php echo $user['id_employe'] ?>"  class="modif">Modifier</a>
@@ -49,37 +49,18 @@
     </tbody>
 </table>
 </fieldset><br>
-<form action="modifier.php" methode="POST">
-        <div class="modification-box">
-                    <h1>Modification</h1>
-                        <div class="boxtext">
-                            <input type="text" placeholder="Nom" name="nom" value="Name"></div>
-
-                        <div class="boxtext">
-                            <input type="text" placeholder="Prénom" name="Pnom" value="prenom"/></div>
-
-                        <div class="boxtext">
-                            <input type="email" placeholder="Email" name="email" value="$email"/></div> 
-                        
-                        <div class="boxtext">
-                            <input type="tel" placeholder="Phone" name="phone" value="$phone"/></div>
-
-                        <label for="sexe" class="boxtext" id="sexe">Sexe</label>
-                                <input  type="radio" value="Homme" name="sexe" id="homme"><label for="hom"> Homme</label>
-                                <input  type="radio" value="Femme" name="sexe" id="femme"><label for="fem"> Femme</label>
-
-                        <div class="boxtext">
-                                <i class="fas fa-user"></i>
-                                <input type="text" placeholder="Username" name="pseudo"></div>
-
-                        <div class="boxtext">
-                                <i class="fas fa-lock"></i>
-                                <input type="password" placeholder="Password" name="motdp"></div><br>
-                                <input type="submit" value="modifier" class="inscrip" ></div>
-                                </div>
-</form>  
-    <a href="administrateur.html"><input type="submit" value="Annuler" class="annuler" ></a>
-</section>
+<div class="modification-box">
+<?php if (isset($_GET['success']) && $_GET['success'] == 1): ?>
+    <div style="background-color: #d4edda; color: #155724; padding: 10px; margin: 10px; border: 1px solid #c3e6cb;">
+        ✅ L'employé a bien été modifié.
+    </div>
+</div>
+<?php endif; ?>
+<script>
+    setTimeout(() => {
+        const msg = document.querySelector('div[style*="background-color"]');
+        if (msg) msg.remove();
+    }, 5000); // 5 secondes
+</script>
 </body>
-
 </html>
