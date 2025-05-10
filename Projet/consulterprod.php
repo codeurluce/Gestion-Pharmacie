@@ -45,7 +45,7 @@
 			}
 			?>
 		<br><br><br>
-		<a href="Administrateur.html"><input type="submit" value="Retour" class="inscrip"></a>		
+		<a href="pharmacian.html"><input type="submit" value="Retour" class="inscrip"></a>		
 	</section>		
     <body>
 </html>
