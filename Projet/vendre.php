@@ -56,7 +56,7 @@
             </tbody>
         </table>
         </fieldset>
-            <a href="administrateur.html"><input type="submit" value="Retour" class="annuler" ></a>
+            <a href="pharmacian.html"><input type="submit" value="Retour" class="annuler" ></a>
         </section>
         </body>
         
